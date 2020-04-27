@@ -1,0 +1,19 @@
+{% extends '_layouts/base.njk' %}
+
+{% block content %}
+<article class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      {% block info %}
+        <img src="{{members.image}}" alt="queen member" class="img-fluid">
+      {% endblock %}
+    </div>
+    <div class="col-sm-8">
+      {% block story %}
+        <h1>Entry headline goes here</h1>
+        <p>Entry text goes here</p>
+      {% endblock %}
+    </div>
+  </div>
+</article>
+{% endblock %}

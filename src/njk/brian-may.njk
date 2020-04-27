@@ -1,0 +1,11 @@
+{% extends '_layouts/detail-entry.njk' %}
+{% set members = data.members[1] %}
+
+{% block page_title %}Blog entry title{% endblock %}
+
+{% block description %}Blog entry description.{% endblock %}
+
+{% block story %}
+  <h1> {{members.name}} </h1>
+  <h5> {{members.text}} </h5>
+{% endblock %}

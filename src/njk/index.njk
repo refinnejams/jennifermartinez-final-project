@@ -1,0 +1,36 @@
+{% extends '_layouts/base.njk' %}
+
+{% block page_title %}Queen's Log{% endblock %}
+
+{% block page_description %}The search description for this page goes here.{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8">
+      {%block info%}
+      <h1>Members</h1>
+      <ul> 
+      {% for members in data.members %}
+        <h3 class="entry-headline"><a href="{{ members.url }}">{{ members.name }}</a></h3>
+        <p class="entry-instruments">{{ members.instruments }}</p>
+         <hr>
+      {% endfor %}
+     </ul>
+     {%endblock%}
+     {%block info%}
+    <div class="col">
+        <h1> Album Headline <h1>
+      <ul> 
+      {% for discography in data.discography %}
+        <h3 class="entry-headline"><a href="{{ discography.img }}">{{ discography.title }}</a></h3>
+        <p class="entry-year">{{ discrogaphy.year }}</p>
+         <hr>
+      {% endfor %}
+     </ul>
+     {%endblock%}
+
+    </div>
+  </div>
+</div>
+{% endblock %}
