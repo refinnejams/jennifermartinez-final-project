@@ -166,3 +166,27 @@ In addition to data in the `src/njk/_data` folder, there is another place you ca
 
 - I'd like to add a Nunjucks Markdown package of some sort to allow adding/editing of basic text in Markdown, perhaps with front-matter. Would prefer to hook up through Google Docs. See [Issue 17](https://github.com/utdata/icj-project-template/issues/17).
 - I'd like to loop through data to create detail pages.
+
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8">
+      <h1>Members</h1>
+      <ul> 
+      {% for members in data.members %}
+        <h3 class="entry-headline"><a href="{{ members.url }}">{{ members.name }}</a></h3>
+        <p class="entry-instruments">{{ members.instruments }}</p>
+         <hr>
+      {% endfor %}
+     </ul>
+    <div class="col">
+        <h1> Album Headline <h1>
+      <ul> 
+      {% for discography in data.discography %}
+        <h3 class="entry-headline"><a href="{{ discography.img }}">{{ discography.title }}</a></h3>
+        <p class="entry-year">{{ discrogaphy.year }}</p>
+         <hr>
+      {% endfor %}
+     </ul>
+     {%endblock%}

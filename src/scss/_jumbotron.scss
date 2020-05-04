@@ -1,10 +1,12 @@
 .jumbotron.banner {
-    background: url(../img\img/queen-band-wallpaper-thin.jpg) no-repeat center;
+    background: url(../img/queen-band-wallpaper-thin.jpg) no-repeat center;
     background-size: cover;
-    color:gold;
-    padding-top: 12rem
+    color:rebeccapurple;
+    padding-top: 12rem;
+
+  h1,p {
+      font-family: 'Cinzel', serif;
+    } 
+    
   }
   
-  .jumbotron {
-    margin-bottom: 30px;
-  }
