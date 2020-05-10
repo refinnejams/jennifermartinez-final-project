@@ -1,0 +1,27 @@
+h3{
+    color:rgb(255,0,0);
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    text-shadow: 2px 2px 2px whitesmoke;
+}
+
+.discography .card-body {
+    background-color:white;
+    text-align: left;
+    border-color: transparentize($color: #000000, $amount: 0);
+    border-width: thin;
+    }
+
+.discography .card-title {
+        text-align: left;
+        color: black;
+        font-family: 'Cinzel', serif;
+    }
+
+.discography .card-text {
+    text-align: left;
+    color: black;
+    font-family: 'EB Garamond', serif;
+    font-weight: 70px;
+    font-size: large;
+}

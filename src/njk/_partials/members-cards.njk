@@ -1,11 +1,14 @@
-<div class="row">
-<div class="card-deck">
-<div class="card">
-    <img class="card-img-top" src="/img/{{ members.imagebw }}" alt="freddie mercury" style="width:100%">
-    <div class="card-body">
-      <h5 class="card-title"> {{ members.name }} </h5>
-      <p class="card-text"> {{ members.instruments }}</p>
+<h2>Members</h2>
+<div class="row members">
+  {% for members in data.members %}
+    <div class="col-sm-6 col-lg-3">
+      <div class="card mb-4">
+        <img class="card-img-top img-fluid" src="img/members/{{ members.imagebw }}" alt="{{members.name}}">
+        <div class="card-body">
+          <h5 class="card-title"> <a href="{{ members.url }}" class="member-title"> {{ members.name }} </a> </h5>
+          <p class="card-text"> {{ members.tenure}} </p>
+        </div>
+      </div>
     </div>
-</div>
-</div>
+  {% endfor %}
 <div>

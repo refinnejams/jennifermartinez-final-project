@@ -5,13 +5,18 @@
   <div class="row">
     <div class="col-sm-4">
       {% block info %}
-        <img src="{{members.image}}" alt="queen member" class="img-fluid">
+        <img src="img/members/{{members.image}}" alt="queen member" class="img-fluid img-member">
       {% endblock %}
     </div>
     <div class="col-sm-8">
       {% block story %}
         <h1>{{members.name}}</h1>
-        <p>{{members.text}}</p>
+          <ul>
+            <li class="detail"> {{members.birthdate}}</li>
+            <li class="detail"> {{members.birthplace}}</li>
+            <li class="detail"> {{members.instruments}}</li>
+          </ul>
+          <p class="detail-2">{{ members.text |safe }}</p>
       {% endblock %}
     </div>
   </div>
